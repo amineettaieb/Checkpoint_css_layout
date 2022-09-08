@@ -7,7 +7,7 @@
 
 /* Header__section  */
 
-header {
+#nav {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -20,6 +20,7 @@ header {
 .menu {
     list-style: none;
     display: flex;
+    
 }
 
 .menu__item {
@@ -37,6 +38,7 @@ header {
         height: 220px;
         position: fixed;
         background-color: white;
+        list-style: none;
 
 }
 .menu__item:hover, .drop__menu:hover{
@@ -45,6 +47,11 @@ header {
 .drop__menu__item:hover{
     background-color: #f6f8f8;
 }
+.menu__item__hover:hover .drop__menu{
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Section1 */
 
@@ -52,15 +59,29 @@ header {
     text-align: center;
     margin-top: 100px;
 }
+.section1>h1{
+    color: #747474;
+}
+
+
+/* Section__Texte */
+
 .Texte{
     display: flex;
     width: 1000px;
     margin: 0% auto;
     gap: 20px;
-    color: #747474;
+    
+}
+.Texte>p{
+    margin: 0.8em 0;
+    line-height: 1.75;
+    font-weight: 400;
 }
 
 /* Services */
+
+
 
 .services {
     display: grid;
@@ -91,13 +112,48 @@ header {
 .container3 {
     background-color: #1b2734;
 }
+select{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0 2em 0 0;
+    -webkit-appearance: none;
+    outline: 0;
+    text-transform: none;
+    cursor: pointer;
+    text-decoration: underline;
+    height: 100px;
+}
+
+/* Section__Link */
+
+
+.Link{
+    display: flex;
+    justify-content: normal;
+    margin-top: 100px;
+    margin-left: 245px;
+} 
+
+ .Logos{
+    display: grid;
+    width: 10%;
+    grid-template-columns: repeat(5,2fr);
+    margin-left: 100px;
+ }
+
+.Logos>li{
+ list-style: none;
+}
+ 
 
 
 
 /* Background__section */
 
 
-.Background{
+ .Background{
     background-color: #dff9f7;
     background-image: url("https://www.docplanner.com/img/logo.png");
     background-repeat: no-repeat;
@@ -105,11 +161,18 @@ header {
     background-position-y: 300px;
     background-position-x: 100px;
 }
-.Background>div{
+
+.container_Background{
+    display: flex;
+    justify-content: space-evenly;
+    width: 1015px;
+    margin: 10px auto;
+}
+/* .Background>div{
     width: 1015px;
     margin: 10px auto;
     display: flex;
-}
+} */
 
 .Photos{
     width: 1200px;
@@ -120,12 +183,92 @@ header {
 figure img{
     width: 308px; height: 277px;
 }
+.container4{
+    display:flex;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+}
+.stats__item {
+    width: 40%;
+    height: 45%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 5%);
+    text-align: center;
+    /* padding: 15px; */
+    font-size: .8125em;
+    margin-top: 70px;
+   
+}
+.office__desc {
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.6666666667;
+    padding: 1.1111111111em;
+}
+div {
+    display: block;
+}
+.stats__h {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 70px;
+    }
+    
+.stats__h p {
+    max-width: 415px;
+    font-size: .875em;
+    font-weight: 400;
+    line-height: 1.7142857143;
+    margin: 1.6em 0;
+}
+
+
+
+/* join-us */
+
+.join-us h1{
+    font-size: 2.1428571429em;
+    color: #333;
+    margin-bottom: 0.75em;
+}
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    padding: 1.1666666667em 1.5em;
+    background: #3d83df;
+    font-family: Roboto,Arial,sans-serif;
+    line-height: 1em;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .04em;
+    font-size: .75rem;
+    text-align: center;
+    text-decoration: none!important;
+    text-transform: uppercase;
+    transition: all .2s ease 0s;
+}
+.join-us_f {
+    display: block;
+    max-width: 520px;
+    margin: 100px auto 100px auto;
+    font-size: .875em;
+    text-align: center;
+}
+
+/*
 @media only screen and (max-width :600px) {
     .Photos{
         display: flex;
         flex-direction: column;
     }
-}
+} */
 
 /* Footer */
 
